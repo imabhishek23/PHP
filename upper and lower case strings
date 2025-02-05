@@ -1,0 +1,14 @@
+<?php
+$text =  "hello world";
+$uppercaseText = strtoupper($text);
+echo $uppercaseText; 
+?>
+
+<?php
+$text ="HELLO WORLD";
+$lowercaseText = strtolower($text);
+echo $lowercaseText; 
+?>
+
+
+
