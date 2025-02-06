@@ -1,0 +1,61 @@
+<?php
+// 1. String Declaration and Output
+$single_quote = 'helllo';
+$double_quote = "how are you";
+$heredoc = <<<EOD
+this is 
+multiline string
+EOD;
+
+// Output the strings with headings
+echo "<div style='font-family: Arial, sans-serif; color: #333; margin: 20px;'>";
+echo "<h2 style='color: #0056b3;'>1. String Declaration and Output:</h2>";
+echo "<p style='font-size: 16px; font-weight: bold;'>Single Quote String: <span style='color: #e67e22;'>$single_quote</span></p>";
+echo "<p style='font-size: 16px; font-weight: bold;'>Double Quote String: <span style='color: #e67e22;'>$double_quote</span></p>";
+echo "<p style='font-size: 16px; font-weight: bold;'>Heredoc String: <span style='color: #e67e22;'>$heredoc</span></p><br>";
+
+// 2. String Concatenation and Output
+$name = "PHP";
+echo "<h2 style='color: #0056b3;'>2. String Concatenation and Output:</h2>";
+echo "<p style='font-size: 16px; font-weight: bold;'>Hello, <span style='color: #e67e22;'>$name</span></p><br>";
+
+// 3. String Manipulation Functions
+$string = "Hello, World!";
+echo "<h2 style='color: #0056b3;'>3. String Manipulation Functions:</h2>";
+echo "<p>Length of string: <span style='color: #e67e22;'>" . strlen($string) . "</span></p>";
+echo "<p>Uppercase: <span style='color: #e67e22;'>" . strtoupper($string) . "</span></p>";
+echo "<p>Lowercase: <span style='color: #e67e22;'>" . strtolower($string) . "</span></p>";
+echo "<p>Title case: <span style='color: #e67e22;'>" . ucwords($string) . "</span></p>";
+echo "<p>Reversed string: <span style='color: #e67e22;'>" . strrev($string) . "</span></p>";
+echo "<p>Replace 'World' with 'PHP': <span style='color: #e67e22;'>" . str_replace("World", "PHP", $string) . "</span></p><br>";
+
+// 4. String Concatenation and Repetition
+$str1 = "Hello";
+$str2 = "PHP";
+$concatenated = $str1 . " " . $str2;  
+$repeated = str_repeat($str1, 3);  
+
+echo "<h2 style='color: #0056b3;'>4. String Concatenation and Repetition:</h2>";
+echo "<p>Concatenated String: <span style='color: #e67e22;'>$concatenated</span></p>";
+echo "<p>Repeated String: <span style='color: #e67e22;'>$repeated</span></p><br>";
+
+// 5. Searching and Checking Strings
+$text = "Learning PHP is fun!";
+$substring = "PHP";
+echo "<h2 style='color: #0056b3;'>5. Searching and Checking Strings:</h2>";
+
+// Check if substring exists in string
+if (strpos($text, $substring) !== false) {
+    echo "<p>'$substring' found at index: <span style='color: #e67e22;'>" . strpos($text, $substring) . "</span></p>";
+} else {
+    echo "<p>'$substring' not found in the text</p>";
+}
+
+// Checking if the string starts or ends with certain substrings
+echo "<p>Starts with 'Learning': <span style='color: #e67e22;'>" . (str_starts_with($text, "Learning") ? "Yes" : "No") . "</span></p>";
+echo "<p>Ends with 'fun!': <span style='color: #e67e22;'>" . (str_ends_with($text, "fun!") ? "Yes" : "No") . "</span></p>";
+
+// Count occurrences of a substring
+echo "<p>Occurrences of 'n': <span style='color: #e67e22;'>" . substr_count($text, "n") . "</span></p>";
+echo "</div>";
+?>
