@@ -1,0 +1,19 @@
+<?php
+$number = $_POST['number'];
+
+function Sum($number) {
+    $sum = 0;
+    while ($number != 0) {
+        $sum += $number % 10; 
+        $number = (int)($number / 10);
+    }
+    return $sum % 2 == 0;
+}
+echo "Enter a number: ";
+
+if (Sum($number)) {
+    echo "The sum $number is even.";
+} else {
+    echo "The sum $number is odd.";
+}
+?>
